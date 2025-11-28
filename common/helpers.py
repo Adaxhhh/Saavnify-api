@@ -5,7 +5,7 @@ import base64
 from Crypto.Cipher import DES
 import random
 
-# User agents for rotation (matching TypeScript implementation)
+# User agents for rotation
 USER_AGENTS = [
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36',
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36',
@@ -28,6 +28,8 @@ def use_fetch(endpoint: str, params: Dict[str, Any], context: str = 'web6dot0') 
         "_marker": "0",
         "api_version": "4",
         "ctx": context
+        "_locale": "en_US"
+        "country": "US"
     }
 
     headers = {
